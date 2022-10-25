@@ -26,5 +26,10 @@ public class HomeController {
         return "home.html";
     }
 
+    @RequestMapping ({"/terminator"})
+    public String getHomePage5(){
+        return "home.html";
+    }
+
 
 }

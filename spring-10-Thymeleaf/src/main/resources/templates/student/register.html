@@ -56,7 +56,6 @@
 
 <h2>Printing Student's Last Name</h2>
 
-
 <ul>
     <li th:each=" student : ${students} " th:text="${student.lastName}"></li>
 </ul>
@@ -91,11 +90,6 @@
     <span th:if="${students.get(0).getState()=='Arizona'}">Arizona</span>
     <span th:unless="${students.get(0).getState()=='Arizona'}">No Arizona</span>
 </div>
-
-
-
-
-
 
 
 

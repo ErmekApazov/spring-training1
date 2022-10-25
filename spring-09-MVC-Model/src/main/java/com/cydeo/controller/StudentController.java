@@ -14,13 +14,15 @@ import java.util.Random;
 public class StudentController {
 
     @RequestMapping("/welcome")
-    public String homePage(Model model){
+    public String homePage(Model model){ // passing model model as a parameter to execute method belongs to model interface
 
         model.addAttribute("name","Cydeo");
+        // "name" attribute is holding "cydeo" value. By using "name" attribute, I will have access to "cydeo" value
+
         model.addAttribute("course","MVC");
 
         String subject = "Spring Boot";
-        model.addAttribute("subject",subject);
+        model.addAttribute("subject", subject);
 
         int studentId = new Random().nextInt();
         model.addAttribute("id",studentId);

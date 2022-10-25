@@ -29,8 +29,8 @@ public class MentorController {
     @PostMapping("/confirm")
     public String submitForm(@ModelAttribute("mentor") Mentor mentor){
 
-
-//        return "mentor/mentor-register";
+//        return "mentor/mentor-register"; // this return view is the same as on register method
+        // so you can just redirect to it.
         return "redirect:/mentor/register";
     }
 

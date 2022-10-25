@@ -28,9 +28,10 @@ public class CarController {
     }
 
 
-    //localhost:8080/info3?make=Honda&year=2015
+    //localhost:8080/info3?make=Honda&year=2015 ==> //localhost:8080/info3?year=2015&make=Honda - it still works.
+    //Because @RequestParam parameter is based on matching names, and position doesn't matter.
     @RequestMapping("/info3")
-    public String carInfo3(@RequestParam String make,@RequestParam int year, Model model){
+    public String carInfo3(@RequestParam String make, @RequestParam int year, Model model){
 
         model.addAttribute("make",make);
         model.addAttribute("year",year);
@@ -39,7 +40,8 @@ public class CarController {
     }
 
 
-    //localhost:8080/info/honda/2015
+    //localhost:8080/info/honda/2015 ----> localhost:8080/info/2015/honda - error.
+    // in @PathVariable paramater is based on position. first goes make then year, names should be same.
     @RequestMapping("/info/{make}/{year}")
     public String getCarInfo(@PathVariable String make,@PathVariable int year){
 
