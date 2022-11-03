@@ -28,7 +28,8 @@ public class Merchant {
 
 //    @OneToMany // foreign key is gonna be created
     @OneToMany (mappedBy = "merchant") // its gonna stop creating foreign key inside merchant table. // in OneToMany relationship, ownership belongs to many side;
-    private List<Payment> paymentList;
+    private List<Payment> paymentList; // I don't want to see payment information in Merchant table, but to see it in Payment Table.
+    //OneToMany ==> One is Merchant, Many is Payment. One Merchant has Many payments
 
     public Merchant(String name, String code, BigDecimal transactionFee, BigDecimal commissionRate, Integer payoutDelayCount) {
         this.name = name;

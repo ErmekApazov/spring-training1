@@ -18,7 +18,7 @@ public class Movie extends BaseEntity{
     private String name;
 
     @Column(columnDefinition = "DATE")
-    private LocalDate releaseData; // check the name of table in sql table name, must match
+    private LocalDate releaseDate; // check the name of table in sql table name, must match
 
     private Integer duration;
 
@@ -37,7 +37,7 @@ public class Movie extends BaseEntity{
     @JoinTable (name = "movie_genre_rel", // you 're modifying join table which is created by Spring Boot, third table
     joinColumns = @JoinColumn(name="movie_id"),
     inverseJoinColumns = @JoinColumn(name = "genre_id"))// other table's genre_id
-            private List<Genre> genreList;
+    private List<Genre> genreList;
 
 
 

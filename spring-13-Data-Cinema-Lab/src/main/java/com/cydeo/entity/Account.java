@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Data
+//@Data
 @NoArgsConstructor
 @Table(name = "account_details")
 public class Account extends BaseEntity {
@@ -25,4 +25,8 @@ public class Account extends BaseEntity {
 
     @OneToOne(mappedBy = "account") // foreign key should be in user object, hence mappedBy will stop creating here
     private User user;
+
+
+
+
 }

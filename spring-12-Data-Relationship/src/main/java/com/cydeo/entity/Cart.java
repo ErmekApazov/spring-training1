@@ -22,6 +22,6 @@ public class Cart {
     @ManyToMany
     @JoinTable (name = "cart_item_rel",
     joinColumns = @JoinColumn(name = "c_id"),
-    inverseJoinColumns = @JoinColumn(name="i_id")) //it is third table created by Spring
+    inverseJoinColumns = @JoinColumn(name="i_id")) // only to manipulate column names in third table.
     private List<Item> itemList;
 }
